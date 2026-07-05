@@ -1,1 +1,2 @@
-﻿Add final video file path here. Kaggle requires a video under 5 minutes, uploaded to media library and YouTube.
+﻿video/AI_Onboarding_Companion_Demo.mp4
+YouTube: https://youtu.be/969dEPjpEXE
