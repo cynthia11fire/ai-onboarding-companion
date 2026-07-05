@@ -4,12 +4,35 @@
 
 [Watch the demo video](https://youtu.be/GVTpSY4bBmg?si=sFwelHeHnq73pS4L) | [Kaggle Writeup](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/ai-onboarding-companion)
 
+![AI Onboarding Companion hero](images/ai-onboarding-companion-hero.png)
 
 AI Onboarding Companion is an AI Agent built with Google Agent Development Kit (ADK) to support employee onboarding.
 
 It helps new hires understand what comes next, handles everyday onboarding questions, reduces administrative coordination for HR, and helps managers or HR step in when human judgment or support is needed.
 
 The Agent helps coordinate the new hire's organizational socialization journey across people, workplace systems, and onboarding workflows.
+
+---
+
+## Product Screenshots
+
+### New Hire Experience
+
+![New Hire Experience](images/new-hire-dashboard.png)
+
+Personalized onboarding dashboard that guides new employees through their first 90 days with AI-powered assistance.
+
+### Multi-Role Support View
+
+![Multi-role dashboard](images/multi-role-dashboard.png)
+
+A coordinated product demo showing how the same onboarding journey supports the new hire, manager, and HR team from different perspectives.
+
+### Agent Architecture
+
+![Agent architecture](images/agent-architecture.png)
+
+The agent uses a Google ADK root agent, modular skills, tool-based workflows, shared onboarding memory, and Human-in-the-Loop approval for sensitive actions.
 
 ---
 
@@ -159,10 +182,10 @@ Can you give me access to the finance dashboard?
 How am I doing so far?
 ```
 
-The project also includes a local demo UI for product storytelling:
+The project also includes an interactive product demo UI:
 
 ```text
-demo_ui/
+Index/ai_onboarding_interactive_site/
 ```
 
 ---
@@ -183,7 +206,14 @@ onboarding_agent/
   eval/
     test_cases.json                Evaluation scenarios
     priority_and_privacy.feature   Gherkin spec for priority + privacy
+  Index/
+    ai_onboarding_interactive_site/ Interactive product demo UI
   demo_ui/                         Local product demo UI
+  images/
+    ai-onboarding-companion-hero.png
+    new-hire-dashboard.png
+    multi-role-dashboard.png
+    agent-architecture.png
   AGENTS.md                        System blueprint
   run_demo.py                      Scripted demo conversation
   requirements.txt
@@ -237,6 +267,3 @@ AI Onboarding Companion aims to help organizations of any size deliver onboardin
 AI supports people.
 
 It does not replace them.
-
-
-
