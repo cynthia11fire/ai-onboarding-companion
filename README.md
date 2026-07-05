@@ -208,18 +208,19 @@ onboarding_agent/
     priority_and_privacy.feature   Gherkin spec for priority + privacy
   Index/
     ai_onboarding_interactive_site/ Interactive product demo UI
-  demo_ui/                         Local product demo UI
   images/
     ai-onboarding-companion-hero.png
     new-hire-dashboard.png
     multi-role-dashboard.png
     agent-architecture.png
+  submission/                      Submission assets and links
   AGENTS.md                        System blueprint
+  Kaggle_Submission_Writeup_Final.md Final Kaggle writeup backup
+  Submission_Checklist.md          Final submission checklist
   run_demo.py                      Scripted demo conversation
   requirements.txt
   .env.example
 ```
-
 ---
 
 ## Design Principles
@@ -267,3 +268,5 @@ AI Onboarding Companion aims to help organizations of any size deliver onboardin
 AI supports people.
 
 It does not replace them.
+
+
