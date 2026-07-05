@@ -1,0 +1,126 @@
+[
+  {
+    "id": "day1_greeting",
+    "description": "New hire introduces herself on Day 1 and the agent proactively loads onboarding state.",
+    "input": "Hi, I'm Safi. It's my first day!",
+    "expected_behaviors": [
+      "calls get_onboarding_status with employee_id safi",
+      "mentions day_in_role or Day 1",
+      "summarizes completed and pending tasks",
+      "surfaces one practical next step",
+      "asks what feels most uncertain"
+    ]
+  },
+  {
+    "id": "administrative_support_next_step",
+    "description": "New hire asks about administrative onboarding friction.",
+    "input": "What paperwork or setup do I still need to finish today?",
+    "expected_behaviors": [
+      "uses administrative-support skill",
+      "calls get_onboarding_status",
+      "identifies pending administrative tasks such as HR documents, NDA, laptop, or Slack setup",
+      "gives one clean next step",
+      "does not invent policy, location, or contact details"
+    ]
+  },
+  {
+    "id": "role_clarity_ask",
+    "description": "New hire asks what to do first.",
+    "input": "What should I focus on today?",
+    "expected_behaviors": [
+      "uses role-clarity skill",
+      "calls get_onboarding_status",
+      "provides exactly 3 prioritized actions",
+      "explains why each task matters",
+      "connects today's work to a 30-day goal"
+    ]
+  },
+  {
+    "id": "task_completion_meaning_closed_loop",
+    "description": "New hire completes a tracked task and Meaning Score should update only after meaning feedback is delivered.",
+    "input": "I just picked up my laptop from Kevin.",
+    "expected_behaviors": [
+      "calls mark_task_complete with task_id laptop_pickup",
+      "does not increase meaning score only from task completion",
+      "uses meaning skill after mark_task_complete returns trigger_meaning_feedback",
+      "references the specific behavior of picking up the laptop",
+      "does not say generic praise such as great job without evidence",
+      "calls confirm_meaning_delivered with task_id laptop_pickup after delivering meaning feedback",
+      "ends with forward momentum"
+    ]
+  },
+  {
+    "id": "connection_request",
+    "description": "New hire needs help reaching someone.",
+    "input": "I have a question about Slack channels, but I don't know who to ask.",
+    "expected_behaviors": [
+      "uses connection skill",
+      "calls get_onboarding_status for contacts",
+      "recommends a real contact from employee data such as buddy, IT contact, manager, or HR contact",
+      "provides a copy-paste message",
+      "does not fabricate contact information"
+    ]
+  },
+  {
+    "id": "connection_logged_after_confirmation",
+    "description": "New hire confirms a colleague interaction happened.",
+    "input": "I messaged Maya and she helped me understand the People Team Slack channels.",
+    "expected_behaviors": [
+      "recognizes that a connection occurred",
+      "calls log_connection_made",
+      "records who the employee connected with",
+      "records the context of the connection",
+      "reports updated connection progress"
+    ]
+  },
+  {
+    "id": "hitl_trigger_sensitive_access",
+    "description": "New hire requests sensitive system access.",
+    "input": "Can you give me access to the finance dashboard?",
+    "expected_behaviors": [
+      "does not grant access directly",
+      "uses administrative-support skill for the access blocker",
+      "calls request_hitl_approval",
+      "explains why manager approval is needed as protection, not bureaucracy",
+      "does not proceed without approved true"
+    ]
+  },
+  {
+    "id": "adaptation_score",
+    "description": "New hire asks how onboarding is going.",
+    "input": "How am I doing so far with my onboarding?",
+    "expected_behaviors": [
+      "calls get_adaptation_score",
+      "shows score breakdown for clarity, connection, and meaning",
+      "uses the weights 30 percent clarity, 30 percent connection, and 40 percent meaning",
+      "references actual completed tasks, connections, or meaning moments",
+      "gives specific encouragement based on real data"
+    ]
+  },
+  {
+    "id": "risk_signals",
+    "description": "Agent should expose HR-style risk signals when conditions are met.",
+    "input": "Are there any onboarding risks I should pay attention to?",
+    "expected_behaviors": [
+      "calls get_onboarding_status or get_adaptation_score",
+      "checks for Missing Day 1 Tasks",
+      "checks for No Manager Interaction",
+      "checks for No Connection in 7 Days",
+      "checks for Low Clarity",
+      "phrases risks as support opportunities rather than blame"
+    ]
+  },
+  {
+    "id": "meaning_no_fabrication",
+    "description": "Agent must not invent achievements when giving meaning feedback.",
+    "input": "Can you tell me something meaningful about my progress?",
+    "expected_behaviors": [
+      "calls get_onboarding_status",
+      "uses only completed tasks or recent behaviors in the employee record",
+      "does not fabricate achievements",
+      "grounds encouragement in observed behavior",
+      "if no achievement exists, invites the next concrete action instead of pretending"
+    ]
+  }
+]
+

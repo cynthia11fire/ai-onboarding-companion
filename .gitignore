@@ -1,0 +1,40 @@
+﻿# Secrets
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ADK local state and logs
+.adk/
+adk_web_*.log
+*.log
+
+# Node / frontend demo
+node_modules/
+dist/
+build/
+interactive_demo/node_modules/
+interactive_demo/dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Media files are submitted via Kaggle media library / YouTube, not GitHub
+Vedio/
+*.mp4
+*.mp3
+*.wav
