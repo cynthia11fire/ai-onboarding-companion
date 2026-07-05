@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Onboarding Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo"><i data-lucide="sprout"></i></div>
+        <div>
+          <strong>AI Onboarding</strong>
+          <span>Companion</span>
+          <small>Online · Ready to help</small>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-item active" data-view="newhire"><i data-lucide="home"></i><span>Today</span></button>
+        <button class="nav-item" data-view="journey"><i data-lucide="route"></i><span>My Journey</span></button>
+        <button class="nav-item" data-view="chat"><i data-lucide="messages-square"></i><span>Ask AI</span></button>
+        <button class="nav-item" data-view="resources"><i data-lucide="file-text"></i><span>Resources</span></button>
+        <button class="nav-item" data-view="progress"><i data-lucide="bar-chart-3"></i><span>My Progress</span></button>
+      </nav>
+      <div class="buddy-card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face" alt="Maya Chen" />
+        <div>
+          <strong>Maya Chen</strong>
+          <span>Onboarding Support</span>
+        </div>
+        <button id="messageBuddy"><i data-lucide="send"></i><span>Message Maya</span></button>
+      </div>
+      <div class="safe-card">
+        <div class="safe-icon"><i data-lucide="shield-check"></i></div>
+        <strong>This is a safe space.</strong>
+        <p>AI does not judge you. It helps simplify, clarify, and support.</p>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">New Hire Experience</p>
+          <h1>AI Onboarding Companion</h1>
+        </div>
+        <div class="role-switcher" aria-label="Switch demo role">
+          <button class="role active" data-panel="newhirePanel">New Hire</button>
+          <button class="role" data-panel="managerPanel">Manager</button>
+          <button class="role" data-panel="hrPanel">HR</button>
+        </div>
+      </header>
+
+      <section id="newhirePanel" class="panel active-panel">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">Your First Day</p>
+            <h2>Good morning, Safi.</h2>
+            <h3>One step at a time.</h3>
+            <p>Let’s make today simple. I’ll guide you through the essentials, step by step.</p>
+            <button class="primary" id="startStep"><span>Start this step</span><i data-lucide="arrow-right"></i></button>
+          </div>
+          <div class="illustration-card" aria-hidden="true">
+            <i data-lucide="sparkles"></i>
+            <span>AI</span>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <section class="card next-step-card">
+            <div class="section-head">
+              <div>
+                <p class="overline">Your next step</p>
+                <h3>Focus on this first</h3>
+              </div>
+              <span class="pill">~ 5 min</span>
+            </div>
+            <div class="task-main">
+              <div class="step-number">1</div>
+              <div>
+                <h2 id="currentTask">Submit your tax forms</h2>
+                <p>This is the first important step to get everything set up.</p>
+              </div>
+            </div>
+            <button class="primary" id="completeTask"><span>Mark as complete</span><i data-lucide="check"></i></button>
+          </section>
+
+          <section class="card progress-card">
+            <div class="section-head compact">
+              <div>
+                <p class="overline">Today’s journey</p>
+                <h3>Progress</h3>
+              </div>
+              <i data-lucide="circle-gauge"></i>
+            </div>
+            <div class="progress-layout">
+              <div class="progress-ring"><span id="progressNumber">38%</span></div>
+              <div class="progress-meta">
+                <p id="progressText">You’re doing great, Safi.</p>
+                <strong id="stepCount">3 of 8</strong>
+                <span>steps completed</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="card">
+          <div class="section-head compact"><h3>Up next</h3><span class="muted">We’ll unlock these together</span></div>
+          <div class="task-list">
+            <div><span>2</span> Set up your work device <em>Coming next</em></div>
+            <div><span>3</span> Meet your team & get channels <em>Coming next</em></div>
+            <div><span>4</span> Complete your HR paperwork <em>Coming next</em></div>
+          </div>
+        </section>
+
+        <section class="card chat-card">
+          <div class="section-head compact"><h3>Ask AI Companion</h3><span class="muted">No question is too small</span></div>
+          <div id="chatLog" class="chat-log"><div class="bubble ai">Hi Safi. Welcome to your first day. What would you like help with?</div></div>
+          <div class="quick-prompts">
+            <button data-prompt="What should I focus on today?">What should I focus on today?</button>
+            <button data-prompt="Who should I ask for IT help?">Who should I ask for IT help?</button>
+            <button data-prompt="I'm worried I'll ask too many questions.">I’m worried I’ll ask too many questions.</button>
+            <button data-prompt="Did I actually make progress?">Did I actually make progress?</button>
+          </div>
+          <form id="chatForm">
+            <input id="chatInput" placeholder="Type your message..." />
+            <button type="submit" aria-label="Send message"><i data-lucide="send"></i></button>
+          </form>
+        </section>
+      </section>
+
+      <section id="managerPanel" class="panel">
+        <div class="hero-card manager">
+          <div class="hero-copy">
+            <p class="eyebrow">Manager Support</p>
+            <h2>Support your new hire at the right moments.</h2>
+            <p>Here’s how Safi is doing and what you can do next.</p>
+          </div>
+          <div class="status ontrack"><i data-lucide="check-circle-2"></i><span>On track</span></div>
+        </div>
+        <div class="grid three">
+          <section class="card stat"><span>Current step</span><strong>Submit tax forms</strong><small>Due in 2 days</small></section>
+          <section class="card stat"><span>Progress</span><strong id="managerProgress">38%</strong><small>3 of 8 steps</small></section>
+          <section class="card stat"><span>AI insight</span><strong>No 1:1 yet</strong><small>Suggest a short check-in</small></section>
+        </div>
+        <section class="card suggestion"><h3>Suggested next step</h3><p>A short conversation helps new hires feel supported and aligned.</p><button class="primary" id="scheduleOneOnOne"><span>Schedule 1:1</span><i data-lucide="calendar-plus"></i></button></section>
+        <section class="card"><h3>Quick actions</h3><div class="quick-actions"><button>Send welcome message</button><button>Share team resources</button><button>View Safi’s journey</button></div></section>
+      </section>
+
+      <section id="hrPanel" class="panel">
+        <div class="hero-card hr">
+          <div class="hero-copy">
+            <p class="eyebrow">HR Support Center</p>
+            <h2>See support moments. Take action. Help people succeed.</h2>
+            <p>AI looks for moments where a new hire may benefit from additional support.</p>
+          </div>
+        </div>
+        <div class="grid five">
+          <section class="card stat"><span>Total new hires</span><strong>24</strong><small>This month</small></section>
+          <section class="card stat"><span>On track</span><strong>16</strong><small>67%</small></section>
+          <section class="card stat alert"><span>Need support</span><strong>5</strong><small>21%</small></section>
+          <section class="card stat alert"><span>Support cases</span><strong>5</strong><small>21%</small></section>
+          <section class="card stat"><span>Support actions</span><strong>8</strong><small>This month</small></section>
+        </div>
+        <section class="notice"><i data-lucide="shield-check"></i><strong>This is not about performance.</strong><span>It’s about giving the right support at the right time.</span></section>
+        <section class="card"><h3>Support moments</h3><div class="support-table"><div class="support-row"><strong>Kevin Chen</strong><span>Low task completion · Long response times</span><em class="high">Priority: High</em><button>View details <i data-lucide="arrow-right"></i></button></div><div class="support-row"><strong>Nina Patel</strong><span>Few questions asked · Skipping optional tasks</span><em class="medium">Keep an eye</em><button>View details <i data-lucide="arrow-right"></i></button></div><div class="support-row"><strong>Tom Nguyen</strong><span>Repeated confusion · Incomplete HR docs</span><em class="high">Priority: High</em><button>View details <i data-lucide="arrow-right"></i></button></div></div></section>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast">Action completed.</div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
