@@ -1,4 +1,4 @@
-# AI Onboarding Companion - Submission Checklist
+﻿# AI Onboarding Companion - Submission Checklist
 
 ## Required by Kaggle
 
@@ -6,7 +6,7 @@
 - [ ] Track selected: Business Agent
 - [ ] Cover image uploaded to media library (file ready: submission/cover.png)
 - [ ] Demo video uploaded to media library
-- [x] YouTube video link added: https://youtu.be/GVTpSY4bBmg?si=sFwelHeHnq73pS4L
+- [x] YouTube video link added: https://youtu.be/969dEPjpEXE
 - [x] Public project link added: https://github.com/cynthia11fire/ai-onboarding-companion
 - [x] GitHub repository or public code link added: https://github.com/cynthia11fire/ai-onboarding-companion
 - [ ] Final writeup submitted, not left as draft
@@ -47,5 +47,6 @@ Taiwan time: 2026-07-07 14:59
 Prepared folder: submission/ 
 
 Still needed from user: Kaggle report submission and final media upload.
+
 
 

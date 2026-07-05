@@ -4,7 +4,7 @@
 
 [繁體中文 README](README.zh-TW.md)
 
-[Watch the demo video](https://youtu.be/GVTpSY4bBmg?si=sFwelHeHnq73pS4L) | [Kaggle Writeup](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/ai-onboarding-companion)
+[Watch the demo video](https://youtu.be/969dEPjpEXE) | [Kaggle Writeup](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/ai-onboarding-companion)
 
 ![AI Onboarding Companion hero](images/ai-onboarding-companion-hero.png)
 
@@ -270,4 +270,5 @@ AI Onboarding Companion aims to help organizations of any size deliver onboardin
 AI supports people.
 
 It does not replace them.
+
 

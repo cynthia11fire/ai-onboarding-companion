@@ -63,8 +63,11 @@ Thumbs.db
 *.seed
 *.tgz
 
-# Media files are submitted via Kaggle media library / YouTube, not GitHub
-Vedio/
+# Media files are generally submitted via Kaggle media library / YouTube.
+# Keep the final demo video in the repo for judges who browse GitHub.
 *.mp4
+!Vedio/
+!Vedio/AI_Onboarding_Companion_Demo.mp4
 *.mp3
 *.wav
+
