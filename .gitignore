@@ -22,16 +22,46 @@ dist/
 build/
 interactive_demo/node_modules/
 interactive_demo/dist/
+*.tsbuildinfo
+.vite/
+
+# Package manager / frontend cache
+.npm/
+.eslintcache
+.stylelintcache
+.pnpm-store/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Framework build output
+.next/
+out/
+.nuxt/
+.output/
+.cache/
+.parcel-cache/
+.svelte-kit/
+.docusaurus/
+.serverless/
 
 # OS / editor
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+.vscode-test/
 
 # Temporary files
 *.tmp
 *.bak
+*.pid
+*.pid.lock
+*.seed
+*.tgz
 
 # Media files are submitted via Kaggle media library / YouTube, not GitHub
 Vedio/
