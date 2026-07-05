@@ -2,6 +2,9 @@
 
 ### Making the first 90 days clearer, calmer, and more human.
 
+[Watch the demo video](https://youtu.be/GVTpSY4bBmg?si=sFwelHeHnq73pS4L) | [Kaggle Writeup](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/ai-onboarding-companion)
+
+
 AI Onboarding Companion is an AI Agent built with Google Agent Development Kit (ADK) to support employee onboarding.
 
 It helps new hires understand what comes next, handles everyday onboarding questions, reduces administrative coordination for HR, and helps managers or HR step in when human judgment or support is needed.
@@ -217,6 +220,12 @@ Future enterprise capabilities include:
 
 ---
 
+## License
+
+Code is licensed under MIT. The Kaggle submission materials are made available under CC BY 4.0 for competition purposes.
+
+---
+
 ## Vision
 
 Every organization welcomes new employees.
@@ -228,4 +237,6 @@ AI Onboarding Companion aims to help organizations of any size deliver onboardin
 AI supports people.
 
 It does not replace them.
+
+
 
