@@ -160,9 +160,9 @@ The project demonstrates how AI Agents can coordinate people, tools, memory, and
 
 ---
 
-## Try It
+## Run Locally
 
-Start the ADK web app:
+The ADK web app requires your own Gemini API key.
 
 ```bash
 pip install -r requirements.txt
@@ -184,10 +184,10 @@ Can you give me access to the finance dashboard?
 How am I doing so far?
 ```
 
-The project also includes an interactive product demo UI:
+The project also includes a frontend-only interactive product demo UI. This static demo does not require an API key:
 
 ```text
-Index/ai_onboarding_interactive_site/
+Index/ai_onboarding_interactive_site/index.html
 ```
 
 ---
@@ -270,5 +270,6 @@ AI Onboarding Companion aims to help organizations of any size deliver onboardin
 AI supports people.
 
 It does not replace them.
+
 
 
